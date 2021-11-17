@@ -6,6 +6,7 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
+    min-width: 400px;
 }
 
 
@@ -14,16 +15,20 @@ text-align: center;
 }
 .price-text h3{
     font-size: 16px;
-line-height: 60px;
+line-height: 50px;
 color: #fe00c5;
-font-weight: 700;
+font-weight: 800;
 font-family: 'Exo', sans-serif;
+}
+.price-heading{
+padding: 2%;
+
 }
 .price-text h2{
     font-size: 36px;
 line-height: 48px;
 color: #081245;
-font-weight: 700;
+font-weight: 900;
 font-family: 'Exo', sans-serif;
 text-align: center;
 }
@@ -55,74 +60,36 @@ background-color: #ff4200;
     width: 350px;
 height: auto;
 filter: drop-shadow(0px -8px 19px rgba(0,0,0,0.13));
-background-image: linear-gradient(-180deg, #ffffff 0%, #f3f3f3 100%);
+background-image: linear-gradient(59deg
+, #FAFAFA 0%,#FAFAFA 50%, #FFFFFF 50%);
+    box-shadow: 7.35px 7px 23px 24px #00000010;
+    
 }
 .block2{
     width: 350px;
 height: auto;
 background-image: linear-gradient(0deg, #081245 0%, #001376 100%);
+position: relative;
 }
-.block3{
-    width: 350px;
-height: auto;
-filter: drop-shadow(0px -8px 19px rgba(0,0,0,0.13));
-background-image: linear-gradient(-180deg, #ffffff 0%, #f3f3f3 100%);
-}
-.block1-content{
-    padding-left: 75px;
-    padding-top: 55px;
-}
-.block1-content h5{
-    font-size: 16px;
-    line-height: 36px;
-    color: #ffc200;
-    font-weight: 600;
-    font-family: "Archivo";
-    margin-bottom: 16px;
-}
-.block1-content h3{
-    font-size: 30px;
-line-height: 36px;
-color: #01136d;
-font-weight: 700;
-font-family: "Exo";
-}
-.block1-content p{
-    font-size: 72px;
-    line-height: 1.2;
-    color: #ff4200;
-    font-weight: 900;
-    font-family: "Exo";
-    margin-top: 42px;
-    position: relative;
-    padding-left: 20px;
-}
-.block1-content p span{
-    font-size: 24px;
-line-height: 36px;
-color: #ffba00;
-}
-.block1-content p span:nth-of-type(1){
+.block2::after{
+    content:"";
+    display: block;
     position: absolute;
-    top: 0;
+    width: 100%;
+    height: 100%;
     left: 0;
+    top: 0;
+    background-image: linear-gradient(59deg, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.05) 50%, transparent 50%);
+
 }
-.block1-content p span:nth-of-type(2){
-    left:-15px;
-        position: relative;
-}
-.block1-content h6{
-    font-size: 16px;
-    line-height: 36px;
-    color: #ff7f1a;
-    font-weight: 500;
-    font-family: "Archivo";
-    text-align: center;
-}
+
+
 ul {
     list-style: none;
   }
-  
+  li{
+      margin-bottom: 15px;
+  }
   ul li:before {
     content: '✓';
   }
@@ -134,20 +101,24 @@ ul {
 line-height: 36px;
 color: #ffffff;
 font-weight: 600;
-font-family: "Archivo";
+font-family: 'Archivo', sans-serif;
 border: none;
+position: relative;
   }
 
   .block2-content{
-    padding-left: 75px;
-    padding-top: 55px;
+    width: 235px;
+    margin:auto;
+    padding: 55px 0;
+    
 }
+
 .block2-content h5{
     font-size: 16px;
     line-height: 36px;
     color: #ffc200;
     font-weight: 600;
-    font-family: "Archivo";
+    font-family: 'Archivo', sans-serif;
     margin-bottom: 16px;
 }
 .block2-content h3{
@@ -155,14 +126,14 @@ border: none;
 line-height: 36px;
 color: #ffffff;
 font-weight: 700;
-font-family: "Exo";
+font-family: 'Archivo', sans-serif;
 }
 .block2-content p{
     font-size: 72px;
     line-height: 1.2;
     color: #ffffff;
-    font-weight: 900;
-    font-family: "Exo";
+    font-weight: bold;
+    font-family: 'Archivo', sans-serif;
     margin-top: 42px;
     position: relative;
     padding-left: 20px;
@@ -187,7 +158,7 @@ color: #ffba00;
     line-height: 36px;
     color: #ff7f1a;
     font-weight: 500;
-    font-family: "Archivo";
+    font-family: 'Archivo', sans-serif;
     text-align: center;
 }
 .ticket-btn2{  
@@ -198,8 +169,22 @@ font-size: 16px;
 line-height: 36px;
 color: #ffffff;
 font-weight: 600;
-font-family: "Archivo";
+font-family: 'Archivo', sans-serif;
 border: none;
+position: relative;
+}
+
+.ticket-btn:after,
+.ticket-btn2:after{
+content:"";
+display: block;
+position: absolute;
+width: 100%;
+height: 100%;
+left: 0;
+top: 0;
+background-image: linear-gradient(18deg, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.05) 50%, transparent 50%);
+
 }
 .ul-buisnessplan{
     color: white;
@@ -207,15 +192,16 @@ border: none;
 }
 
 .block1-content{
-    padding-left: 75px;
-    padding-top: 55px;
+    width: 235px;
+    margin:auto;
+    padding: 55px 0;
 }
 .block1-content h5{
     font-size: 16px;
     line-height: 36px;
     color: #ffc200;
     font-weight: 600;
-    font-family: "Archivo";
+    font-family: 'Archivo', sans-serif;
     margin-bottom: 16px;
 }
 .block1-content h3{
@@ -223,14 +209,14 @@ border: none;
 line-height: 36px;
 color: #01136d;
 font-weight: 700;
-font-family: "Exo";
+font-family: 'Archivo', sans-serif;
 }
 .block1-content p{
     font-size: 72px;
     line-height: 1.2;
     color: #ff4200;
-    font-weight: 900;
-    font-family: "Exo";
+    font-weight: bold;
+    font-family: 'Archivo', sans-serif;
     margin-top: 42px;
     position: relative;
     padding-left: 20px;
@@ -254,6 +240,15 @@ color: #ffba00;
     line-height: 36px;
     color: #ff7f1a;
     font-weight: 500;
-    font-family: "Archivo";
+    font-family: 'Archivo', sans-serif;
     text-align: center;
+}
+
+@media screen and (max-width:991px) {
+    .prices-blocks{
+        flex-direction: column;
+    }
+    .prices-blocks>div{
+        margin: auto;
+    }
 }
